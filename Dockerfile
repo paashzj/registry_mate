@@ -14,4 +14,4 @@ COPY --from=build /opt/sh/compile/pkg/registry_mate /opt/sh/registry/mate/regist
 
 WORKDIR /opt/sh/registry
 
-CMD ["/usr/local/bin/dumb-init", "bash", "-vx", "/opt/sh/registry/mate/scripts/start.sh"]
+CMD ["/usr/bin/dumb-init", "bash", "-vx", "/opt/sh/registry/mate/scripts/start.sh"]
