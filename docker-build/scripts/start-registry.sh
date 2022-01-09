@@ -1,3 +1,5 @@
 #!/bin/bash
 
-nohup registry serve /etc/docker/registry/config.yml >$REGISTRY_HOME/registry.stdout.log 2>$REGISTRY_HOME/registry.stderr.log &
+mkdir $REGISTRY_HOME/logs
+nohup registry serve /etc/docker/registry/config.yml >>$REGISTRY_HOME/logs/registry.stdout.log 2>>$REGISTRY_HOME/logs/registry.stderr.log &
+
